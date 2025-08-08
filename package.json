@@ -6,9 +6,16 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "profold-be-api-1"
+    "url": "profold-be-api-1",
+    "engines": {
+  "node": ">=10.0.0"
+}
+
   },
   "scripts": {
+    "start": "node src/app.js",
+
+    "build": "echo 'No build step defined'",
     "test": "set USE_MOCK_MODEL=1 && mocha --recursive --require dotenv/config",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
@@ -19,21 +26,21 @@
   "license": "ISC",
   "dependencies": {
     "@app-core/errors": "file:core/errors",
-    "@app-core/server": "file:core/express",
     "@app-core/handlebars": "file:core/handlebars",
     "@app-core/http-request": "file:core/http-request",
     "@app-core/jwt": "file:core/jwt",
     "@app-core/knex": "file:core/knex",
     "@app-core/logger": "file:core/logger",
+    "@app-core/messages": "file:messages",
+    "@app-core/middlewares": "file:middlewares",
     "@app-core/mock-factory": "file:core/mock-factory",
     "@app-core/mongoose": "file:core/mongoose",
     "@app-core/notifier": "file:core/notifier",
     "@app-core/randomness": "file:core/randomness",
     "@app-core/repository-factory": "file:core/repository-factory",
     "@app-core/security": "file:core/security",
+    "@app-core/server": "file:core/express",
     "@app-core/validator": "file:core/validator",
-    "@app-core/messages": "file:messages",
-    "@app-core/middlewares": "file:middlewares",
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -46,6 +53,7 @@
     "knex": "^3.1.0",
     "mongoose": "^8.2.0",
     "mysql2": "^3.9.1",
+    "nodemon": "^3.1.10",
     "pino": "^8.19.0",
     "request-ip": "^3.3.0",
     "resend": "^3.2.0",
