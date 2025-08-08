@@ -13,7 +13,7 @@
 
   },
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node app.js",
 
     "build": "echo 'No build step defined'",
     "test": "set USE_MOCK_MODEL=1 && mocha --recursive --require dotenv/config",
