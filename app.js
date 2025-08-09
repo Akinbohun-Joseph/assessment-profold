@@ -1,13 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 
-try {
-  if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-  }
-} catch (error) {
-  console.log('dotenv not available, using environment variables from system');
-}
+console.log('Loaded PORT:', process.env.PORT);
 
 const fs = require('fs');
 const { createServer } = require('@app-core/server');
