@@ -1,10 +1,13 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 
+// Initialize module aliases FIRST
+require('module-alias/register');
+
 console.log('Loaded PORT:', process.env.PORT);
 
 const fs = require('fs');
-const { createServer } = require('@app-core/server');
+const { createServer } = require('./core/express');
 // const { createConnection } = require('@app-core/mongoose');
 
 const canLogEndpointInformation = process.env.CAN_LOG_ENDPOINT_INFORMATION;
